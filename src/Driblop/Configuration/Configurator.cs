@@ -8,7 +8,7 @@ namespace Driblop.Configuration {
                 return JsonConvert.DeserializeObject<TConfig>(File.ReadAllText(path));
             }
             var config = new TConfig();
-            File.WriteAllText(path, JsonConvert.SerializeObject(config));
+            File.WriteAllText(path, JsonConvert.SerializeObject(config, Formatting.Indented));
             return config;
         }
     }

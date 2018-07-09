@@ -2,7 +2,7 @@
 using Nancy;
 
 namespace Driblop.Modules {
-    public class DLModule<TContext> : NancyModule {
+    public abstract class DLModule<TContext> : NancyModule {
         public TContext serverContext;
 
         public DLModule(string modulePath) : base(modulePath) {
